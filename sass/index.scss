@@ -1,0 +1,94 @@
+$comic-border: rgb(119, 118, 118) solid 1px;
+$comic-pannel-border: black solid 2px;
+
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgb(194, 192, 192);
+}
+main {
+    width: 50vw;
+    height: 130vh;
+    margin: 0 auto;
+    background-color: black;
+    border: $comic-border;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: 20vh;
+    border-top-left-radius: 10px;
+    .comicTop{
+        display: grid;
+        height: 30vh;
+        background: linear-gradient(to right, #214c6e 0%,#0d1c2a 100%);
+        border-top-left-radius: 10px;
+        section {
+            text-align: center;
+        }
+        .title{
+            grid-column: 2/4;
+            color: white;
+            h1{
+                font-size: 3em;
+                margin: .2em 0;
+            }
+            h4{
+                margin: 0;
+            }
+            h5{
+                margin: 1em 0 0;
+            }
+        }
+        .compLogo{
+            border: $comic-pannel-border;
+            margin: .5em;
+            height: 20vh;
+            width: 10vw;
+            .imgLogo{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .compPrice{
+                display: grid;
+                background-color: rgb(68, 68, 68);
+                color: white;
+                margin: 0;
+                .price{
+                    grid-column: 1/2;
+                    margin: 0;
+                }
+                .date{
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+    .comicBot{
+        background-image: url(https://media.giphy.com/media/xTiTnolgxvZcJwdq4E/giphy.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .centralContent{
+            width: 100%;
+            height: 60vh;
+        }
+        .bottomContent{
+            display: grid;
+            grid-template-columns: repeat(5, 10vw);
+            img{
+                margin-top: 2em;
+                width: 100%;
+                grid-column: 1/2;
+                transform: rotate(270deg);
+            }
+        }
+    }
+     
+}
+
+
