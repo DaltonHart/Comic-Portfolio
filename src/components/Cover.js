@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Cover extends Component {
   render() {
     return (
-      <div >
+      <div className='cover'>
           <header className='comicTop'>
           <section className='compLogo'>
             <div className='imgLogo'>

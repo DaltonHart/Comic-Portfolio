@@ -13,84 +13,113 @@ body{
     font-family: $body-font; 
 }
 main {
-    width: 50vw;
-    height: 130vh;
-    margin: 2em auto;
-    background-color: black;
-    border: $comic-border;
-    display: flex;
-    flex-direction: column;
-    grid-template-rows: 20vh;
-    border-top-left-radius: 10px;
-    -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 3px 40px 2px rgba(0,0,0,0.3);
-    .comicTop{
-        display: grid;
-        grid-template-columns: 12vw auto;
-        height: 30vh;
-        background: linear-gradient(to right, #295363 0%,#214c6e 5%,#0d1c2a 100%);
+    .cover{
+        width: 40vw;
+        height: 130vh;
+        margin: 2em auto;
+        background-color: black;
+        border: $comic-border;
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 20vh;
         border-top-left-radius: 10px;
-        section {
-            text-align: center;
-        }
-        .title{
-            grid-column: 2/4;
-            color: white;
-            font-family: $comic-font;
-            color: red;
-            img{
-                width: 90%;
-                height: 90%;
+        -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 40px 2px rgba(0,0,0,0.3);
+        .comicTop{
+            display: grid;
+            grid-template-columns: 12vw auto;
+            height: 30vh;
+            background: linear-gradient(to right, #295363 0%,#214c6e 5%,#0d1c2a 100%);
+            border-top-left-radius: 10px;
+            section {
+                text-align: center;
             }
-        }
-        .compLogo{
-            margin: .5em;
-            height: 20vh;
-            width: 10vw;
-            .imgLogo{
-                width: 100%;
-                img{
-                    width: 100%;
-                }
-            }
-            .compPrice{
-                display: grid;
-                background-color: rgb(68, 68, 68);
+            .title{
+                grid-column: 2/4;
                 color: white;
-                margin: 0;
-                .price{
-                    grid-column: 1/2;
-                    margin: 0;
+                font-family: $comic-font;
+                color: red;
+                img{
+                    width: 90%;
+                    height: 90%;
                 }
-                .date{
-                    grid-column: 2/3;
-                    font-size: .2em;
-                    p{
-                        margin:0;
+            }
+            .compLogo{
+                margin: .5em;
+                height: 20vh;
+                width: 10vw;
+                .imgLogo{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .compPrice{
+                    display: grid;
+                    background-color: rgb(68, 68, 68);
+                    color: white;
+                    margin: 0;
+                    .price{
+                        grid-column: 1/2;
+                        margin: 0;
+                    }
+                    .date{
+                        grid-column: 2/3;
+                        font-size: .2em;
+                        p{
+                            margin:0;
+                        }
                     }
                 }
             }
         }
-    }
-    .comicBot{
-        background-image: url(https://media.giphy.com/media/xTiTnolgxvZcJwdq4E/giphy.gif);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        .centralContent{
-            width: 100%;
-            height: 60vh;
-        }
-        .bottomContent{
-            display: grid;
-            grid-template-columns: repeat(5, 10vw);
-            img{
-                margin-top: 2em;
+        .comicBot{
+            background-image: url(https://media.giphy.com/media/xTiTnolgxvZcJwdq4E/giphy.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            .centralContent{
                 width: 100%;
-                grid-column: 1/2;
-                transform: rotate(270deg);
+                height: 60vh;
             }
+            .bottomContent{
+                display: grid;
+                grid-template-columns: repeat(5, 10vw);
+                img{
+                    margin-top: 2em;
+                    width: 100%;
+                    grid-column: 1/2;
+                    transform: rotate(270deg);
+                }
+            }
+        }
+
+    }
+    .projects{
+        width: 80vw;
+        height: 130vh;
+        margin: 2em auto;
+        background-color: white;
+        border: $comic-border;
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        grid-template-rows: 20vh;
+        -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 40px 2px rgba(0,0,0,0.3);
+        .leftpg{
+            border: $comic-border;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to left, #aaa 0%,#ddd 5%,#fff 100%);
+        }
+        .rightpg{
+            border: $comic-border;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, #aaa 0%,#ddd 5%,#fff 100%);
         }
     }
      
