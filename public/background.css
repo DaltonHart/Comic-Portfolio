@@ -1,0 +1,7 @@
+body{
+    background-color: black;
+    background-image: url(assets/comicBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
