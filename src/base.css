@@ -107,15 +107,77 @@ main .projects {
 }
 main .projects .leftpg {
   border: #777676 solid 1px;
-  width: 50%;
+  width: 40vw;
   height: 100%;
   background: linear-gradient(to left, #aaa 0%, #ddd 5%, #fff 100%);
 }
 main .projects .rightpg {
   border: #777676 solid 1px;
-  width: 50%;
+  width: 40vw;
   height: 100%;
   background: linear-gradient(to right, #aaa 0%, #ddd 5%, #fff 100%);
+}
+main .projects .innerContent {
+  margin: 1vw;
+  height: 100%;
+  border: #777676 solid 1px;
+}
+main .projects .innerContent h2 {
+  color: red;
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 2em;
+  background: linear-gradient(to bottom right, orange, yellow);
+  margin: 0.5em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  width: 50%;
+  border: black solid 2px;
+}
+main .projects .innerContent .projPanels {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .projects .projectCard {
+  border: black solid 2px;
+  width: 46%;
+  margin: 2%;
+  padding: 1%;
+  position: relative;
+  transition: transform 1s, box-shadow 1s;
+  background: white;
+}
+main .projects .projectCard img {
+  width: 100%;
+}
+main .projects .projectCard p {
+  display: inline;
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  background: white;
+  padding: 0.5em;
+}
+main .projects .projectCard:nth-child(even) {
+  transform: skewY(-3deg);
+  transform-origin: top left;
+}
+main .projects .projectCard:nth-child(even) p {
+  bottom: 2px;
+  right: 16px;
+}
+main .projects .projectCard:nth-child(odd) {
+  transform: skewY(3deg);
+  transform-origin: top right;
+}
+main .projects .projectCard:nth-child(odd) p {
+  bottom: 2px;
+  left: 16px;
+}
+main .projects .projectCard:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 20px 50px -23px #857d85;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=base.css.map */
