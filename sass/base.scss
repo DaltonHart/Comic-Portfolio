@@ -14,7 +14,7 @@ body{
 }
 main {
     .cover{
-        width: 40vw;
+        width: 45vw;
         height: 130vh;
         margin: 2em auto;
         background-color: black;
@@ -97,34 +97,33 @@ main {
 
     }
     .projects{
-        width: 80vw;
-        height: 130vh;
+        width: 90vw;
         margin: 2em auto;
         background-color: white;
         border: $comic-border;
         display: flex;
         flex-direction: row;
-        overflow: scroll;
         grid-template-rows: 20vh;
         -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 3px 40px 2px rgba(0,0,0,0.3);
         .leftpg{
             border: $comic-border;
-            width: 40vw;
-            height: 100%;
+            width: 45vw;
             background: linear-gradient(to left, #aaa 0%,#ddd 5%,#fff 100%);
         }
         .rightpg{
             border: $comic-border;
-            width: 40vw;
-            height: 100%;
+            width: 45vw;
             background: linear-gradient(to right, #aaa 0%,#ddd 5%,#fff 100%);
         }
         .innerContent{
             margin: 1vw;
             height: 100%;
             border: $comic-border;
+            overflow: scroll;
+            height: 100vh;
+            padding: 0em 1em 1em;
             h2{
                 color:red;
                 font-family: $comic-font;
@@ -142,14 +141,24 @@ main {
                 flex-wrap: wrap;
             }
         }
+        .projectcontainer{
+            padding: 1em;
+        }
         .projectCard{
             border: $comic-pannel-border;
-            width: 46%;
+            width: 43%;
+            height: 25vh;
             margin: 2%;
             padding: 1%;
             position: relative;
             transition: transform 1s, box-shadow 1s;
             background: white;
+            background-size: cover;
+            background-position: center;
+            color: black;
+            a{
+                text-decoration: none;
+            }
             img{
                 width: 100%;  
             }
@@ -160,6 +169,16 @@ main {
                 text-align: center;
                 background: white;
                 padding: .5em;
+            }
+            span {
+                display: block;
+                position: absolute;
+                width: 90%;
+                padding: .2em;
+                margin: 0;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.712);
+                z-index: 30;
             }
             
         }
@@ -183,6 +202,78 @@ main {
             transform: scale(1.1);
             box-shadow: 2px 20px 50px -23px rgba(133,125,133,1);
             z-index: 10;
+        }
+        canvas{
+            width: 100% !important;
+        }
+        .button{
+            background-color: #214c6e;
+            margin: 0 auto;
+        }
+        .is-success:hover {
+            background-color: #3277ac;
+        }
+        form{
+            width:50%;
+            margin: auto;
+            
+        }
+        .resumeTop{
+            display: flex;
+            flex-direction: row;
+            h2{
+                width: 50%;
+            }
+        }
+    }
+    .backcover{
+        width: 45vw;
+        height: 130vh;
+        margin: 2em auto;
+        background: linear-gradient(to bottom, #295363 0%,#214c6e 5%,#0d1c2a 50%,#214c6e 95%,#295363 100%);
+        border: $comic-border;
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 20vh;
+        border-top-right-radius: 10px;
+        -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 40px 2px rgba(0,0,0,0.3);
+        h2{
+            color:red;
+            font-family: $comic-font;
+            text-align: center;
+            font-size: 2.5em;
+            background: linear-gradient(to bottom right, orange, yellow);
+            margin: .5em auto;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            width: 90%;
+            border: $comic-pannel-border;
+        }
+        .textarea{
+            margin: 0 0 1em;
+        }
+        .button{
+            width: 100%;
+            margin-bottom: .5em;
+        }
+        .button:hover{
+            background-color: #214c6e;
+            color: white;
+        }
+        .segment{
+            margin: 1em;
+        }
+        .social{
+            display: flex;
+            a{
+                font-size: 2.5em;
+                margin: 0 1em;
+                width: 25%;
+                color: white;
+            }
+
         }
         
     }

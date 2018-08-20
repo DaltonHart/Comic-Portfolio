@@ -10,7 +10,7 @@ body {
 }
 
 main .cover {
-  width: 40vw;
+  width: 45vw;
   height: 130vh;
   margin: 2em auto;
   background-color: black;
@@ -92,14 +92,12 @@ main .cover .comicBot .bottomContent img {
   transform: rotate(270deg);
 }
 main .projects {
-  width: 80vw;
-  height: 130vh;
+  width: 90vw;
   margin: 2em auto;
   background-color: white;
   border: #777676 solid 1px;
   display: flex;
   flex-direction: row;
-  overflow: scroll;
   grid-template-rows: 20vh;
   -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
@@ -107,20 +105,21 @@ main .projects {
 }
 main .projects .leftpg {
   border: #777676 solid 1px;
-  width: 40vw;
-  height: 100%;
+  width: 45vw;
   background: linear-gradient(to left, #aaa 0%, #ddd 5%, #fff 100%);
 }
 main .projects .rightpg {
   border: #777676 solid 1px;
-  width: 40vw;
-  height: 100%;
+  width: 45vw;
   background: linear-gradient(to right, #aaa 0%, #ddd 5%, #fff 100%);
 }
 main .projects .innerContent {
   margin: 1vw;
   height: 100%;
   border: #777676 solid 1px;
+  overflow: scroll;
+  height: 100vh;
+  padding: 0em 1em 1em;
 }
 main .projects .innerContent h2 {
   color: red;
@@ -138,14 +137,24 @@ main .projects .innerContent .projPanels {
   display: flex;
   flex-wrap: wrap;
 }
+main .projects .projectcontainer {
+  padding: 1em;
+}
 main .projects .projectCard {
   border: black solid 2px;
-  width: 46%;
+  width: 43%;
+  height: 25vh;
   margin: 2%;
   padding: 1%;
   position: relative;
   transition: transform 1s, box-shadow 1s;
   background: white;
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+main .projects .projectCard a {
+  text-decoration: none;
 }
 main .projects .projectCard img {
   width: 100%;
@@ -157,6 +166,16 @@ main .projects .projectCard p {
   text-align: center;
   background: white;
   padding: 0.5em;
+}
+main .projects .projectCard span {
+  display: block;
+  position: absolute;
+  width: 90%;
+  padding: 0.2em;
+  margin: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 30;
 }
 main .projects .projectCard:nth-child(even) {
   transform: skewY(-3deg);
@@ -178,6 +197,76 @@ main .projects .projectCard:hover {
   transform: scale(1.1);
   box-shadow: 2px 20px 50px -23px #857d85;
   z-index: 10;
+}
+main .projects canvas {
+  width: 100% !important;
+}
+main .projects .button {
+  background-color: #214c6e;
+  margin: 0 auto;
+}
+main .projects .is-success:hover {
+  background-color: #3277ac;
+}
+main .projects form {
+  width: 50%;
+  margin: auto;
+}
+main .projects .resumeTop {
+  display: flex;
+  flex-direction: row;
+}
+main .projects .resumeTop h2 {
+  width: 50%;
+}
+main .backcover {
+  width: 45vw;
+  height: 130vh;
+  margin: 2em auto;
+  background: linear-gradient(to bottom, #295363 0%, #214c6e 5%, #0d1c2a 50%, #214c6e 95%, #295363 100%);
+  border: #777676 solid 1px;
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 20vh;
+  border-top-right-radius: 10px;
+  -webkit-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 40px 2px rgba(0, 0, 0, 0.3);
+}
+main .backcover h2 {
+  color: red;
+  font-family: "Bangers", cursive;
+  text-align: center;
+  font-size: 2.5em;
+  background: linear-gradient(to bottom right, orange, yellow);
+  margin: 0.5em auto;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  width: 90%;
+  border: black solid 2px;
+}
+main .backcover .textarea {
+  margin: 0 0 1em;
+}
+main .backcover .button {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+main .backcover .button:hover {
+  background-color: #214c6e;
+  color: white;
+}
+main .backcover .segment {
+  margin: 1em;
+}
+main .backcover .social {
+  display: flex;
+}
+main .backcover .social a {
+  font-size: 2.5em;
+  margin: 0 1em;
+  width: 25%;
+  color: white;
 }
 
 /*# sourceMappingURL=base.css.map */
