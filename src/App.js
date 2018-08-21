@@ -11,8 +11,8 @@ class App extends Component {
       <div className="App">
         <main>
          {/* <Cover/> */}
-         {/* <Projects/> */}
-         <Backcover/>
+         <Projects/>
+         {/* <Backcover/> */}
         </main>
       </div>
     );
